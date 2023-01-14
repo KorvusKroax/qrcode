@@ -1,5 +1,5 @@
 <?php
-    require_once("phpqrcode/qrlib.php");
+    include("phpqrcode/qrlib.php");
 
     $path = "img/";
     $filename = time() . ".png";
