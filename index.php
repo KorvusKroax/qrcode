@@ -9,6 +9,9 @@
     <title>QR code</title>
 </head>
 <body>
+    <h1>QR code</h1>
+    
+    <?php require("qrcode.php"); ?>
     
 </body>
 </html>
