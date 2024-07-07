@@ -3,7 +3,7 @@
 
     $content = "";
 
-    if (isset($_POST["submit"])) 
+    if (isset($_POST["submit"]))
     {
         $content = $_POST["content"];
 
@@ -13,7 +13,7 @@
 
         $qrcode_content = "https://optometeroptika.hu/qrcode/" . $content;
 
-        QRcode::png($qrcode_content, $qrcode_image, "H", 10);      // https://phpqrcode.sourceforge.net
+        QRcode::png($qrcode_content, $qrcode_image, QR_ECLEVEL_L, 10, 1); // https://phpqrcode.sourceforge.net
 
         echo "<img src='" . $qrcode_image . "'>";
 
@@ -47,6 +47,9 @@
 <style>
     body {
         text-align: center;
+    }
+    img {
+        image-rendering: pixelated;
     }
 </style>
 
