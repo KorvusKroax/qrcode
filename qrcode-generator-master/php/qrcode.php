@@ -560,11 +560,8 @@ class QRCode {
 
         for ($r = 0; $r < $this->getModuleCount(); $r++) {
             for ($c = 0; $c < $this->getModuleCount(); $c++) {
-                // $color = $this->isDark($r, $c) ? "#000000" : "#ffffff";
-                // print('<rect x="' . ($c * $size) . '" y="' . ($r * $size) . '" width="' . $size . '" height="' . $size . '" fill="' . $color . '" shape-rendering="crispEdges"/>');
-                if ($this->isDark($r, $c)) {
-                    print('<circle cx="' . ($c * $size + $size * .5) . '" cy="' . ($r * $size + $size * .5) . '" r="' . ($size * .45) . '" fill="#000000"/>');
-                }
+                $color = $this->isDark($r, $c) ? "#000000" : "#ffffff";
+                print('<rect x="' . ($c * $size) . '" y="' . ($r * $size) . '" width="' . $size . '" height="' . $size . '" fill="' . $color . '" shape-rendering="crispEdges"/>');
             }
         }
 
